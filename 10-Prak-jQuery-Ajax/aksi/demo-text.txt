@@ -1,0 +1,2 @@
+<h2>JQuery dan Ajax</h2>
+<p id="p1">ini adalah beberapa teks dalam suatu paragraf</p>

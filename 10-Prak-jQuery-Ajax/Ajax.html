@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemograman Internet</title>
+    <script src="libs/jquery-2.0.2.min.js"></script>
+    <script>
+    $(document).ready(function(){
+		$("#btn1").click(function(){
+			$("#div1").load("aksi/demo-text.txt", function(responTxt,statusTxt,xhr){
+                if (statusTxt == "success") {
+                    alert("Konten Eksternal Yang berhasil dimuat");
+                } else {
+                    alert("Error: " + xhr.status + ": " + xhr.statusText);
+                }
+            });
+		});
+	});
+    </script>
+</head>
+<body>
+    <div id="div1"><h2>Gunakan JQuery untuk merubah teks berikut</h2></div>
+    <button id="btn1">Dapatkan Konten Eksternal</button>
+</body>
+</html>

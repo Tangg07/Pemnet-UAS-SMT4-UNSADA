@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemograman Internet</title>
+    <script src="libs/jquery-2.0.2.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#form1").submit(function(){
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                success: function(data){
+                    $("#hasil").html(data);
+                }
+            });
+        });
+        return false;
+	});
+    </script>
+</head>
+<body>
+    <form action="aksi/prosesForm.php" id="form1" method="POST">
+        <table>
+            <tr>
+                <td>NIM : </td>
+                <td><input type="text" name="nim" size="30"></td>
+            </tr>
+            <tr>
+                <td>Nama : </td>
+                <td><input type="text" name="nama" size="40"></td>
+            </tr>
+            <tr>
+                <td>Tempat Tanggal Lahir : </td>
+                <td><input type="text" name="ttl" size="40"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit"> || 
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

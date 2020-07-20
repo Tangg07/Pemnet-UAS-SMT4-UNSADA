@@ -1,0 +1,12 @@
+1. User 1
+	Email : muhammadangga0704@gmail.com
+	password: angga
+
+2. User 2
+	Email : Anggasyamsul70@gmail.com
+	Password: admin
+
+
+
+
+Create database : pemnet_login
